@@ -30,7 +30,7 @@
         class="p-2 hover:"
         :class="{
           'pointer-events-none bg-gradient-to-br from-blue-500 to-red-500 opacity-80 rounded-full':
-            $route.path === '/sdgs',
+            $route.path === '/sdgs' || $route.path === '/story',
         }"
         >SDGs成果</router-link
       >
