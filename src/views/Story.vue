@@ -14,7 +14,7 @@
         class="cursor-pointer md:w-md md:mx-auto min-h-80 bg-white rounded-xl shadow-md overflow-hidden flex flex-col gap-5"
         v-for="info in filteredInfo"
         :key="info.id"
-        @click="goToArticle(info.id)"
+        @click="goToStory(info.id)"
       >
         <img
           src="https://via.placeholder.com/150"
@@ -62,8 +62,8 @@ const filteredInfo = computed(() => {
 });
 
 const router = useRouter();
-const goToArticle = (id) => {
-  router.push({ name: "article-detail", params: { id } });
+const goToStory = (id) => {
+  router.push({ name: "story-detail", params: { id } });
 };
 </script>
 <style scoped>

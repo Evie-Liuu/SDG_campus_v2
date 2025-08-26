@@ -1,5 +1,5 @@
 <template>
-  <main class="pt-40 flex flex-col justify-center items-center gap-8">
+  <main class="pt-30 flex flex-col justify-center items-center gap-8">
     <nav class="absolute z-10 left-50 top-30 flex flex-col">
       <router-link to="/">回首頁</router-link>
     </nav>
@@ -11,19 +11,47 @@
     />
     <section class="flex flex-col gap-4">
       <div
-        class="cursor-pointer md:min-w-5xl md:mx-auto min-h-80 bg-white rounded-xl shadow-md overflow-hidden flex"
+        class="cursor-pointer md:min-w-7xl md:mx-auto min-h-80 bg-white rounded-xl shadow-md overflow-hidden flex"
         v-for="info in filteredInfo"
         :key="info.id"
-        @click="goToArticle(info.id)"
+        @click="goToActions(info.id)"
       >
         <img
           src="https://via.placeholder.com/150"
           alt="Card Image"
-          class="w-1/2 object-cover"
+          class="w-1/3 object-cover"
         />
-        <summary class="p-4 flex flex-col justify-center">
-          <h2 class="text-xl font-bold mb-2">{{ info.title }}</h2>
-          <p class="text-gray-600 text-sm">{{ info.summary }}</p>
+        <summary class="p-4 flex flex-col justify-center w-70">
+          <h2 class="text-md mb-2">主題：{{ info.title }}</h2>
+          <p class="text-md mb-2">
+            時間：{{
+              info.startTime.length
+                ? new Date(info.startTime * 1000).toLocaleDateString() +
+                  " ~ " +
+                  new Date(info.endTime * 1000).toLocaleDateString()
+                : "無期限"
+            }}
+          </p>
+          <p class="text-md mb-2">成員：{{ info.group }}</p>
+          <p class="text-md mb-2">描述：{{ info.intro }}</p>
+
+          <div class="flex items-center w-full gap-3">
+            進度：
+            <!-- Progress Bar -->
+            <div
+              class="relative flex-1 bg-gray-200 rounded-full h-2 overflow-hidden"
+            >
+              <div
+                class="h-2 rounded-full transition-all duration-500"
+                :class="progressColor(info.progress)"
+                :style="{ width: info.progress + '%' }"
+              ></div>
+            </div>
+            <!-- Percentage Number -->
+            <span class="w-10 text-sm text-gray-700 text-left">
+              {{ info.progress }}%
+            </span>
+          </div>
           <p class="text-gray-600 text-sm">更多</p>
         </summary>
       </div>
@@ -48,7 +76,9 @@ const filteredInfo = computed(() => {
   let results = infos;
 
   if (visibilityTab.value !== 0) {
-    results = infos.filter((info) => info.type * 1 === visibilityTab.value);
+    results = infos.filter(
+      (info) => info.types.indexOf(visibilityTab.value) !== -1
+    );
   }
 
   if (keyword.value.trim() !== "") {
@@ -59,6 +89,16 @@ const filteredInfo = computed(() => {
 
   return results;
 });
+
+const progressColor = (progress) => {
+  if (progress < 40) return "bg-red-500";
+  if (progress < 70) return "bg-yellow-400";
+  return "bg-green-500";
+};
+const goToActions = (id) => {
+  return
+  router.push({ name: "actions-detail", params: { id } });
+};
 </script>
 <style scoped>
 </style>

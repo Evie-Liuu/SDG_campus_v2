@@ -1,27 +1,45 @@
 [
     {
         "id": 1,
-        "title": "讀經教育",
-        "time": "",
-        "type": "1",
-        "summary": "全校讀論語 星期四讀經和鎮長。",
-        "description": "全校讀論語 星期四讀經和鎮長。",
-        "thumbnail": "thumb2.jpg"
+        "title": "剩食問題",
+        "group": "一年忠班",
+        "startTime": "1746028800",
+        "endTime": "1753977600",
+        "types": [
+            2
+        ],
+        "intro": "",
+        "progress": 10,
+        "thumbnail": "thumb2.jpg",
+        "description": ""
     },
     {
         "id": 2,
-        "title": "舞蹈社團",
-        "time": "",
-        "type": "1",
-        "summary": "精彩的舞蹈表演，獲得滿堂彩。",
-        "description": "精彩的舞蹈表演，獲得滿堂彩。"
+        "title": "節約用水",
+        "group": "全校",
+        "startTime": "",
+        "endTime": "",
+        "types": [
+            6
+        ],
+        "intro": "",
+        "progress": 80,
+        "thumbnail": "thumb2.jpg",
+        "description": ""
     },
     {
         "id": 3,
         "title": "社區踏查",
-        "time": "",
-        "type": "2",
-        "summary": "",
+        "group": "",
+        "startTime": "",
+        "endTime": "",
+        "types": [
+            2,
+            3
+        ],
+        "intro": "",
+        "progress": 50,
+        "thumbnail": "thumb2.jpg",
         "description": ""
     }
 ]
