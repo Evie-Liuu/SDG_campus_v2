@@ -1,15 +1,36 @@
-<template class="h-max-screen w-min-screen">
-  <nav class="absolute z-10 left-50 top-30 flex flex-col">
-    <router-link to="/">回首頁</router-link>
-  </nav>
-  <main class="pt-25">
-    <picture class="scale-80 flex justify-center bg-cover bg-center">
-      <!-- <source srcset="" /> -->
-      <img class="" src="@/assets/images/CS_map_Filled.png" alt="" />
-    </picture>
-  </main>
+<template>
+  <div v-if="isLoading" class="loading-overlay">
+    <div class="loader"></div>
+    <p>Loading...</p>
+  </div>
+  <div class="w-screen h-screen overflow-hidden">
+    <nav class="absolute z-10 left-50 top-30 flex flex-col text-2xl">
+      <router-link to="/" class="bg-white rounded-md px-8 py-3">回首頁</router-link>
+    </nav>
+    <main class="w-full h-full flex justify-center">
+      <iframe
+        src="https://www.thinglink.com/view/scene/2016738261199749797"
+        type="text/html"
+        class="w-full h-full"
+        style="border: none"
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen
+        scrolling="no"
+      ></iframe>
+    </main>
+  </div>
 </template>
 <script setup>
+import { ref, onMounted } from 'vue'
+
+const isLoading = ref(true)
+
+onMounted(() => {
+  setTimeout(() => {
+    isLoading.value = false
+  }, 500)
+})
 </script>
 <style scoped>
 </style>

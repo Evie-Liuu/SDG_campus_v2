@@ -1,6 +1,10 @@
 <template>
+  <div v-if="isLoading" class="loading-overlay">
+    <div class="loader"></div>
+    <p>Loading...</p>
+  </div>
   <nav
-    class="absolute z-10 w-full p-9 font-bold text-4xl flex flex-row justify-between items-center"
+    class="absolute z-10 w-full p-12 font-bold text-4xl flex flex-row justify-between items-center"
   >
     <router-link to="/"><span class="">彰化市中山國民小學</span></router-link>
     <div class="flex gap-5 text-2xl">
@@ -39,10 +43,15 @@
   <router-view />
 </template>
 <script setup>
+import { ref, onMounted } from 'vue'
+
+const isLoading = ref(true)
+
+onMounted(() => {
+  setTimeout(() => {
+    isLoading.value = false
+  }, 1500)
+})
 </script>
 <style scoped>
-.router-link-active,
-.router-link-exact-active {
-  /* 如果要自訂當前頁面的樣式，可以在這裡加樣式 */
-}
 </style>

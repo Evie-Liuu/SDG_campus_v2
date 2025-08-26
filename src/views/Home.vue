@@ -1,28 +1,41 @@
 <template class="h-max-screen w-min-screen">
   <main
-    class="relative md:h-[1024px] flex flex-col items-center justify-center text-center pt-8 bg-[url(@/assets/images/CS.jpg)] bg-cover bg-center"
+    class="relative md:h-screen flex flex-col items-center justify-center text-center pt-8 bg-[url(@/assets/images/CS_school.png)] bg-cover bg-center"
   >
     <section
-      class="absolute bottom-80 right-80 flex flex-col justify-center gap-5 text-3d text-white text-4xl font-bold"
+      class="absolute bottom-70 left-100 flex flex-col w-90 gap-15 text-white text-4xl font-bold"
     >
-      <router-link to="/about"
-        ><span
-          class="pb-1 border-b border-transparent hover:border-white transition"
-          >校園探索</span
+      <router-link to="/about" class="w-full group">
+        <span
+          class="block w-full text-center p-3 px-9 border bg-gradient-to-br from-blue-500 to-red-500 opacity-90 rounded-full shadow-[0_3px_0_0_hsl(289,14%,48%)]"
         >
-      </router-link>
-      <router-link to="/actions"
-        ><span
-          class="pb-1 border-b border-transparent hover:border-white transition"
-          >SDGs 行動</span
-        >
+          校園探索
+          <i
+            class="fa-solid fa-arrow-right transition-all swing-on-group-hover"
+          ></i>
+        </span>
       </router-link>
 
-      <router-link to="/sdgs"
-        ><span
-          class="pb-1 border-b border-transparent hover:border-white transition"
-          >SDGs 成果</span
+      <router-link to="/actions" class="w-full group">
+        <span
+          class="block w-full text-center p-3 px-9 border bg-gradient-to-br from-blue-500 to-red-500 opacity-90 rounded-full shadow-[0_3px_0_0_hsl(289,14%,48%)]"
         >
+          SDGs 行動
+          <i
+            class="fa-solid fa-arrow-right transition-all swing-on-group-hover"
+          ></i>
+        </span>
+      </router-link>
+
+      <router-link to="/sdgs" class="w-full group">
+        <span
+          class="block w-full text-center p-3 px-9 border bg-gradient-to-br from-blue-500 to-red-500 opacity-90 rounded-full shadow-[0_3px_0_0_hsl(289,14%,48%)]"
+        >
+          SDGs 成果
+          <i
+            class="fa-solid fa-arrow-right transition-all swing-on-group-hover"
+          ></i>
+        </span>
       </router-link>
     </section>
   </main>
