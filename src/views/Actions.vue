@@ -23,7 +23,7 @@
           alt="Card Image"
           class="w-1/2 object-cover object-center overflow-hidden "
         />
-        <summary class="p-4 flex flex-col justify-center w-full">
+        <summary class="p-15 flex flex-col justify-center w-full">
           <h2 class="text-md mb-2">主題：{{ info.title }}</h2>
           <p class="text-md mb-2">
             時間：{{
@@ -62,7 +62,7 @@
               {{ typeTags[t].title }}
             </span>
           </div>
-          <p class="text-gray-600 text-sm text-right pe-15">更多</p>
+          <p class="text-gray-600 text-sm text-right">更多</p>
         </summary>
       </div>
     </section>

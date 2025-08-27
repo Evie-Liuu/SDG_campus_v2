@@ -7,18 +7,18 @@
             4
         ],
         "intro": "全校讀論語 星期四讀經和鎮長。",
-        "img_url": "story-bg.jpg",
+        "img_url": "story-bg.webp",
         "description": "全校讀論語 星期四讀經和鎮長。"
     },
     {
         "id": 2,
         "title": "舞蹈社團",
-        "time": "1783977600",
+        "time": "1741977600",
         "types": [
             4
         ],
         "intro": "精彩的舞蹈表演，獲得滿堂彩。",
-        "img_url": "story-bg.jpg",
+        "img_url": "story-bg.webp",
         "description": "精彩的舞蹈表演，獲得滿堂彩。"
     },
     {
@@ -40,7 +40,7 @@
             11
         ],
         "intro": "",
-        "img_url": "story-bg.jpg",
+        "img_url": "story-bg.webp",
         "description": ""
     }
 ]

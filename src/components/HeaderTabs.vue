@@ -25,7 +25,7 @@
           >更多 ▾</a
         >
         <ul
-          class="absolute top-7 left-1 bg-white shadow rounded hidden group-hover:block"
+          class="absolute z-10 top-7 left-1 bg-white shadow rounded hidden group-hover:block"
         >
           <li v-for="tab in hiddenTabs" :key="tab.value">
             <a
@@ -47,7 +47,7 @@
           v-if="showSearch"
           v-model="keyword"
           type="text"
-          placeholder="搜尋..."
+          placeholder="搜尋標題..."
           class="border rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-blue-400 transition w-40"
         />
       </transition>
