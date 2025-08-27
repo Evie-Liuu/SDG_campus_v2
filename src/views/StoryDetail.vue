@@ -112,10 +112,13 @@ const selectedInfo = ref(infos.find((item) => item.id === parseInt(props.id)));
 
 const bgImageClass = computed(() => {
   if (!selectedInfo.value) return "";
-  const img = selectedInfo.value.img_url || "CS_school.png";
+  const img = selectedInfo.value.img_url.length
+    ? selectedInfo.value.img_url
+    : "CS_school.png";
   // Note: Dynamic url() in Tailwind requires special setup. A style binding is more reliable here.
   // For simplicity in this context, we assume the class name is generated correctly.
-  return `bg-[url('@/assets/images/${img}')]`;
+  //   return `bg-[url('@/assets/images/${img}')]`;
+  return `bg-[url('@/assets/images/story-bg.webp')]`;
 });
 
 // --- Comment Section Logic ---
