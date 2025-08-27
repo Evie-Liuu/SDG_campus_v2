@@ -8,9 +8,9 @@
         'transition-all duration-1000 ease-out',
         isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full',
       ]"
-      class="w-full"
+      class="w-full mt-40"
     >
-      <h1 class="text-4xl md:text-7xl font-bold text-brown-500 my-8 me-80">
+      <h1 class="text-4xl md:text-7xl font-bold text-brown-500  me-80">
         一起跟領角鴞探索中山國小吧！
       </h1>
     </section>
