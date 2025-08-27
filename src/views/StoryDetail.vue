@@ -8,8 +8,8 @@
     <section class="animate-fade-in-up flex flex-col gap-8" v-if="selectedInfo">
       <!-- Article Header -->
       <div
-        :class="[bgImageClass, 'bg-cover', 'bg-center']"
-        class="relative bg-opacity-70 p-7 rounded-md md:h-80 grid grid-cols-1 content-end overflow-hidden"
+        :style="bgImageStyle"
+        class="relative bg-cover bg-center bg-opacity-70 p-7 rounded-md md:h-80 grid grid-cols-1 content-end overflow-hidden"
       >
         <div class="absolute inset-0 bg-black/40"></div>
         <div class="relative z-10 text-white">
@@ -38,7 +38,7 @@
         >
           分享
         </button>
-        <p class="text-gray-700 leading-relaxed w-3/4">
+        <p class="text-gray-700 leading-relaxed w-full">
           {{ selectedInfo.description }}
         </p>
       </section>
@@ -110,15 +110,20 @@ const props = defineProps({ id: String });
 
 const selectedInfo = ref(infos.find((item) => item.id === parseInt(props.id)));
 
-const bgImageClass = computed(() => {
-  if (!selectedInfo.value) return "";
-  const img = selectedInfo.value.img_url.length
-    ? selectedInfo.value.img_url
-    : "CS_school.png";
-  // Note: Dynamic url() in Tailwind requires special setup. A style binding is more reliable here.
-  // For simplicity in this context, we assume the class name is generated correctly.
-  //   return `bg-[url('@/assets/images/${img}')]`;
-  return `bg-[url('@/assets/images/story-bg.webp')]`;
+const bgImageStyle = computed(() => {
+  if (!selectedInfo.value) return {};
+  const img = selectedInfo.value.img_url || "CS_school.png";
+  try {
+    const imageUrl = new URL(`../assets/images/${img}`, import.meta.url).href;
+    return {
+      backgroundImage: `url(${imageUrl})`,
+    };
+  } catch (e) {
+    console.error(e);
+    // Fallback if the image URL is invalid
+    const fallbackUrl = new URL('../assets/images/CS_school.png', import.meta.url).href;
+    return { backgroundImage: `url(${fallbackUrl})` };
+  }
 });
 
 // --- Comment Section Logic ---
