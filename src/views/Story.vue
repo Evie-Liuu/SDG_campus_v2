@@ -19,14 +19,14 @@
         @click="goToStory(info.id)"
       >
         <img
-          src="https://via.placeholder.com/150"
+          src="@/assets/images/story-bg.webp"
           alt="Card Image"
           class="h-45 object-cover"
         />
         <summary class="p-4 flex flex-col justify-center">
           <h2 class="text-xl font-bold mb-2">{{ info.title }}</h2>
-          <p class="text-gray-600 text-sm">{{ info.summary }}</p>
-          <p class="text-gray-600 text-sm">更多</p>
+          <p class="text-gray-600 text-sm">{{ info.intro }}</p>
+          <p class="text-gray-600 text-sm text-right pe-3">更多</p>
         </summary>
       </div>
     </section>
@@ -74,7 +74,9 @@ const filteredInfo = computed(() => {
   let results = infos;
 
   if (visibilityTab.value !== 0) {
-    results = infos.filter((info) => info.type * 1 === visibilityTab.value);
+    results = infos.filter(
+      (info) => info.types.indexOf(visibilityTab.value) !== -1
+    );
   }
 
   if (keyword.value.trim() !== "") {

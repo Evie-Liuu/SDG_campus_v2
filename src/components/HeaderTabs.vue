@@ -73,7 +73,7 @@ import {
   nextTick,
 } from "vue";
 import infos from "@/data/ChungShan.json";
-import targets from "@/data/SDGs_target.json";
+import targets from "@/data/SDGs_goal.json";
 
 const headerTabs = ref(targets);
 const visibilityTab = ref(headerTabs.value[0].value);

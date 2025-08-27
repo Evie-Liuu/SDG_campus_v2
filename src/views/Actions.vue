@@ -89,7 +89,7 @@
 <script setup>
 import { ref, computed } from "vue";
 import infos from "@/data/CS_actions.json";
-import typeTags from "@/data/SDGs_target.json";
+import typeTags from "@/data/SDGs_goal.json";
 import HeaderTabs from "@/components/HeaderTabs.vue";
 
 const visibilityTab = ref(0);
