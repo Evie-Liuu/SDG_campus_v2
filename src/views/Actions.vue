@@ -13,15 +13,15 @@
     />
     <section class="flex flex-col gap-5">
       <div
-        class="cursor-pointer md:min-w-7xl md:mx-auto min-h-80 bg-white rounded-xl shadow-md overflow-hidden flex hover:scale-105"
+        class="animate-fade-in-up cursor-pointer md:w-7xl md:mx-auto min-h-80 bg-white rounded-xl shadow-md overflow-hidden flex hover:scale-105"
         v-for="info in paginatedInfo"
         :key="info.id"
         @click="goToActions(info.id)"
       >
         <img
-          src="https://via.placeholder.com/150"
+          src="../assets/images/sdgs-bg.jpg"
           alt="Card Image"
-          class="w-1/3 object-cover"
+          class="w-1/2 object-cover object-center overflow-hidden "
         />
         <summary class="p-4 flex flex-col justify-center w-full">
           <h2 class="text-md mb-2">主題：{{ info.title }}</h2>

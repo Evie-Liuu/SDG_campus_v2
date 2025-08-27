@@ -32,6 +32,29 @@
     font-size: 2.5rem;
 }
 
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @theme {
     --font-huninn: 'jf-openhuninn', 'sans-serif';
     --font-asap: 'Asap', 'sans-serif';
@@ -40,7 +63,9 @@
     --color-custom-dark: #ff3737;
     --color-brown-500: rgba(77, 50, 12, 255);
 
-    --animation-bounce-x: 'bounce-x 2s ease-in-out infinite';
+    --animation-bounce-x: bounce-x 2s ease-in-out infinite;
+    --animate-fade-in-left: fadeInLeft 0.8s ease-out forwards;
+    --animate-fade-in-up: fadeInUp 0.8s ease-out forwards;
     /* ... */
 }
 
@@ -89,4 +114,21 @@ body {
     100% {
         transform: rotate(360deg);
     }
+}
+
+
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.item-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* 可选：添加悬停效果 */
+.item:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
 }
