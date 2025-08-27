@@ -1,6 +1,6 @@
 <template>
   <main
-    class="h-screen w-screen flex flex-col items-center justify-center text-center bg-[url(@/assets/images/CS_school.png)] bg-cover bg-center overflow-hidden"
+    class="font-huninn h-screen w-screen flex flex-col items-center justify-center text-center bg-[url(@/assets/images/CS_school.png)] bg-cover bg-center overflow-hidden"
   >
     <!-- Title -->
     <section
@@ -24,7 +24,7 @@
             ? 'opacity-100 translate-x-0'
             : 'opacity-0 -translate-x-full',
         ]"
-        class="relative pb-6 scale-170 mt-50 w-[20rem] h-[28rem] flex flex-col items-center justify-center gap-10 text-brown-500 text-3xl font-bold bg-[url(@/assets/images/sign.png)] bg-contain bg-no-repeat bg-center"
+        class="relative pb-8 scale-170 mt-50 w-[20rem] h-[28rem] flex flex-col items-center justify-center gap-10 text-brown-500 text-3xl font-bold bg-[url(@/assets/images/sign.png)] bg-contain bg-no-repeat bg-center"
       >
         <router-link
           to="/about"

@@ -12,7 +12,7 @@
       <div
         class="col-span-3 border p-4 flex items-center justify-center hover:shadow-[10px_5px_10px_-3px_rgba(0,0,0,0.8)]"
       >
-        數據儀表板
+        數據呈現
       </div>
       <div
         class="col-span-1 border p-4 flex items-center justify-center hover:shadow-[10px_5px_10px_-3px_rgba(0,0,0,0.8)]"
