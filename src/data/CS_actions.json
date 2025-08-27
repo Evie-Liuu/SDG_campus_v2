@@ -13,8 +13,22 @@
         "thumbnail": "thumb2.jpg",
         "description": ""
     },
-    {
+        {
         "id": 2,
+        "title": "剩食問題",
+        "group": "一年孝班",
+        "startTime": "1746028800",
+        "endTime": "1753977600",
+        "types": [
+            2
+        ],
+        "intro": "",
+        "progress": 40,
+        "thumbnail": "thumb2.jpg",
+        "description": ""
+    },
+    {
+        "id": 3,
         "title": "節約用水",
         "group": "全校",
         "startTime": "",
@@ -28,7 +42,7 @@
         "description": ""
     },
     {
-        "id": 3,
+        "id": 4,
         "title": "社區踏查",
         "group": "",
         "startTime": "",

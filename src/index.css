@@ -28,19 +28,26 @@
     animation: swing 0.6s ease-in-out;
 }
 
+.group:hover .focus-on-group-hover{
+    font-size: 2.5rem;
+}
+
 @theme {
     --font-huninn: 'jf-openhuninn', 'sans-serif';
+    --font-asap: 'Asap', 'sans-serif';
 
     --color-rrd-100: #ff0000;
     --color-custom-dark: #ff3737;
+    --color-brown-500: rgba(77, 50, 12, 255);
 
     --animation-bounce-x: 'bounce-x 2s ease-in-out infinite';
     /* ... */
 }
 
 body {
-    font-family: 'Jf Openhuninn', serif;
-    font-family: 'Comic Neue', serif;
+    /* font-family: 'Jf Openhuninn', serif; */
+    font-family: 'Asap', sans-serif;
+    /* font-family: 'Comic Neue', serif; */
     background-color: #F4F0EB;
 }
 

@@ -1,5 +1,8 @@
 <template>
-  <div v-if="isLoading" class="loading-overlay">
+  <div
+    v-if="isLoading && ($route.path !== '/' || $route.path !== '/about')"
+    class="loading-overlay"
+  >
     <div class="loader"></div>
     <p>Loading...</p>
   </div>
@@ -43,15 +46,15 @@
   <router-view />
 </template>
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted } from "vue";
 
-const isLoading = ref(true)
+const isLoading = ref(true);
 
 onMounted(() => {
   setTimeout(() => {
-    isLoading.value = false
-  }, 1500)
-})
+    isLoading.value = false;
+  }, 1000);
+});
 </script>
 <style scoped>
 </style>

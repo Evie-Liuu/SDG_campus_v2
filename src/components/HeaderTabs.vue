@@ -2,7 +2,7 @@
   <div>
     <ul
       ref="tabContainer"
-      class="w-full flex flex-row items-center gap-5 h-10 flex-grow"
+      class="w-full flex flex-row items-center gap-5 h-10 flex-grow text-xl"
     >
       <li
         v-for="tab in visibleTabs"
@@ -48,7 +48,7 @@
           v-model="keyword"
           type="text"
           placeholder="搜尋..."
-          class="border rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-blue-400 transition w-48"
+          class="border rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-blue-400 transition w-40"
         />
       </transition>
       <a
@@ -102,7 +102,7 @@ const updateTabs = () => {
 
   const availableWidth =
     container.clientWidth - rightTools.value.offsetWidth - 20; // 20px buffer
-  const moreButtonWidth = 300; // Estimated width for the 'More' button
+  const moreButtonWidth = 350; // Estimated width for the 'More' button
 
   let usedWidth = 0;
   const newVisible = [];

@@ -1,18 +1,20 @@
 <template>
   <main class="pt-30 flex flex-col justify-center items-center gap-8">
-    <nav class="absolute z-10 left-50 top-30 flex flex-col">
-      <router-link to="/">回首頁</router-link>
+    <nav class="absolute z-10 left-50 top-30 flex flex-col text-2xl">
+      <router-link to="/" class="bg-white rounded-md px-8 py-3"
+        >回首頁</router-link
+      >
     </nav>
-    <h1 class="text-3xl font-bold">行動追蹤</h1>
+    <h1 class="text-4xl font-bold">行動追蹤</h1>
     <HeaderTabs
       @update:visibilityTab="updateVisibilityTab"
       @update:keyword="updateKeyword"
       class="md:max-w-7xl md:mx-auto flex flex-row justify-between items-center w-full"
     />
-    <section class="flex flex-col gap-4">
+    <section class="flex flex-col gap-5">
       <div
-        class="cursor-pointer md:min-w-7xl md:mx-auto min-h-80 bg-white rounded-xl shadow-md overflow-hidden flex"
-        v-for="info in filteredInfo"
+        class="cursor-pointer md:min-w-7xl md:mx-auto min-h-80 bg-white rounded-xl shadow-md overflow-hidden flex hover:scale-105"
+        v-for="info in paginatedInfo"
         :key="info.id"
         @click="goToActions(info.id)"
       >
@@ -21,7 +23,7 @@
           alt="Card Image"
           class="w-1/3 object-cover"
         />
-        <summary class="p-4 flex flex-col justify-center w-70">
+        <summary class="p-4 flex flex-col justify-center w-full">
           <h2 class="text-md mb-2">主題：{{ info.title }}</h2>
           <p class="text-md mb-2">
             時間：{{
@@ -29,13 +31,12 @@
                 ? new Date(info.startTime * 1000).toLocaleDateString() +
                   " ~ " +
                   new Date(info.endTime * 1000).toLocaleDateString()
-                : "無期限"
+                : "無"
             }}
           </p>
           <p class="text-md mb-2">成員：{{ info.group }}</p>
           <p class="text-md mb-2">描述：{{ info.intro }}</p>
-
-          <div class="flex items-center w-full gap-3">
+          <div class="flex items-center w-70 gap-3">
             進度：
             <!-- Progress Bar -->
             <div
@@ -52,24 +53,57 @@
               {{ info.progress }}%
             </span>
           </div>
-          <p class="text-gray-600 text-sm">更多</p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <span
+              v-for="t in info.types"
+              :key="t"
+              class="px-3 py-1 text-sm rounded-full bg-blue-100 text-blue-800"
+            >
+              {{ typeTags[t].title }}
+            </span>
+          </div>
+          <p class="text-gray-600 text-sm text-right pe-15">更多</p>
         </summary>
       </div>
     </section>
+    <!-- Pagination -->
+    <div class="flex justify-center items-center gap-4 mt-8">
+      <button
+        @click="prevPage"
+        :disabled="currentPage === 1"
+        class="px-4 py-2 bg-gray-300 rounded-md disabled:opacity-50"
+      >
+        上一頁
+      </button>
+      <span>第 {{ currentPage }} / {{ totalPages }} 頁</span>
+      <button
+        @click="nextPage"
+        :disabled="currentPage === totalPages"
+        class="px-4 py-2 bg-gray-300 rounded-md disabled:opacity-50"
+      >
+        下一頁
+      </button>
+    </div>
   </main>
 </template>
 <script setup>
 import { ref, computed } from "vue";
 import infos from "@/data/CS_actions.json";
+import typeTags from "@/data/SDGs_target.json";
 import HeaderTabs from "@/components/HeaderTabs.vue";
 
 const visibilityTab = ref(0);
 const keyword = ref("");
+const currentPage = ref(1);
+const itemsPerPage = 3;
+
 const updateVisibilityTab = (data) => {
   visibilityTab.value = data;
+  currentPage.value = 1; // Reset to first page on filter change
 };
 const updateKeyword = (data) => {
   keyword.value = data;
+  currentPage.value = 1; // Reset to first page on filter change
 };
 
 const filteredInfo = computed(() => {
@@ -90,13 +124,35 @@ const filteredInfo = computed(() => {
   return results;
 });
 
+const totalPages = computed(() => {
+  return Math.ceil(filteredInfo.value.length / itemsPerPage);
+});
+
+const paginatedInfo = computed(() => {
+  const startIndex = (currentPage.value - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  return filteredInfo.value.slice(startIndex, endIndex);
+});
+
+const nextPage = () => {
+  if (currentPage.value < totalPages.value) {
+    currentPage.value++;
+  }
+};
+
+const prevPage = () => {
+  if (currentPage.value > 1) {
+    currentPage.value--;
+  }
+};
+
 const progressColor = (progress) => {
   if (progress < 40) return "bg-red-500";
   if (progress < 70) return "bg-yellow-400";
   return "bg-green-500";
 };
 const goToActions = (id) => {
-  return
+  return;
   router.push({ name: "actions-detail", params: { id } });
 };
 </script>

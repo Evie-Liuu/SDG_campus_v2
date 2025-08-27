@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isLoading" class="loading-overlay">
+<div v-if="isLoading" class="loading-overlay">
     <div class="loader"></div>
     <p>Loading...</p>
   </div>
@@ -29,7 +29,7 @@ const isLoading = ref(true)
 onMounted(() => {
   setTimeout(() => {
     isLoading.value = false
-  }, 500)
+  }, 2000)
 })
 </script>
 <style scoped>
