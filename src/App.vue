@@ -1,6 +1,6 @@
 <template>
   <div
-    v-if="isLoading && ($route.path !== '/' || $route.path !== '/about')"
+    v-if="isLoading && ($route.path !== '/' && $route.path !== '/about')"
     class="loading-overlay"
   >
     <div class="loader"></div>
@@ -14,7 +14,7 @@
       <router-link
         v-if="$route.path !== '/'"
         to="/about"
-        class="p-2 hover:"
+        class="p-2 px-4"
         :class="{
           'pointer-events-none bg-gradient-to-br from-blue-500 to-red-500 opacity-80 rounded-full':
             $route.path === '/about',
@@ -24,7 +24,7 @@
       <router-link
         v-if="$route.path !== '/'"
         to="/actions"
-        class="p-2 hover:"
+        class="p-2 px-4"
         :class="{
           'pointer-events-none bg-gradient-to-br from-blue-500 to-red-500 opacity-80 rounded-full':
             $route.path === '/actions',
@@ -34,7 +34,7 @@
       <router-link
         v-if="$route.path !== '/'"
         to="/sdgs"
-        class="p-2 hover:"
+        class="p-2 px-4"
         :class="{
           'pointer-events-none bg-gradient-to-br from-blue-500 to-red-500 opacity-80 rounded-full':
             $route.path === '/sdgs' || $route.path === '/story',

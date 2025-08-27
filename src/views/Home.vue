@@ -10,7 +10,7 @@
       ]"
       class="w-full"
     >
-      <h1 class="text-4xl md:text-7xl font-bold text-brown-500 mb-15 me-80">
+      <h1 class="text-4xl md:text-7xl font-bold text-brown-500 my-8 me-80">
         一起跟領角鴞探索中山國小吧！
       </h1>
     </section>
@@ -52,7 +52,7 @@
           'transition-all duration-1000 ease-out',
           isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full',
         ]"
-        class="relative w-48 h-48 md:w-64 md:h-64 scale-270 me-60"
+        class="relative w-48 h-48 md:w-64 md:h-64 scale-270 me-55 mt-50"
         @mousemove="handleMouseMove"
         @mouseleave="resetEyes"
       >
