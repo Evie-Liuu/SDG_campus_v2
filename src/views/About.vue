@@ -4,16 +4,16 @@
     <p>Loading...</p>
   </div>
   <div class="w-screen h-screen overflow-hidden bg-rice-500">
-    <nav class="absolute z-10 left-50 top-30 flex flex-col text-2xl">
+    <!-- <nav class="absolute z-10 left-50 top-30 flex flex-col text-2xl">
       <router-link to="/" class="bg-white rounded-md px-8 py-3"
         >回首頁</router-link
       >
-    </nav>
+    </nav> -->
     <main class="w-full h-full flex justify-center">
       <iframe
         src="https://www.thinglink.com/view/scene/2016738261199749797"
         type="text/html"
-        class="w-full h-full"
+        class="w-full h-full pt-20"
         style="border: none"
         webkitallowfullscreen
         mozallowfullscreen

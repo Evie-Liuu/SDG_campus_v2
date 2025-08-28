@@ -11,9 +11,9 @@
       @update:keyword="updateKeyword"
       class="md:max-w-7xl md:mx-auto flex flex-row justify-between items-center w-full"
     />
-    <section class="flex flex-col gap-5">
+    <section class="flex flex-col gap-5 w-full px-4 md:px-0">
       <div
-        class="animate-fade-in-up cursor-pointer md:w-7xl md:mx-auto min-h-80 bg-white rounded-xl shadow-md overflow-hidden flex hover:scale-105"
+        class="animate-fade-in-up cursor-pointer w-full md:w-7xl md:mx-auto min-h-96 md:min-h-80 bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row hover:scale-105"
         v-for="info in paginatedInfo"
         :key="info.id"
         @click="goToActions(info.id)"
@@ -21,9 +21,9 @@
         <img
           src="../assets/images/sdgs-bg.jpg"
           alt="Card Image"
-          class="w-1/2 object-cover object-center overflow-hidden "
+          class="w-full h-64 md:h-full md:w-1/2 object-cover object-center overflow-hidden"
         />
-        <summary class="p-15 flex flex-col justify-center w-full">
+        <summary class="p-6 md:p-15 flex flex-col justify-center w-full">
           <h2 class="text-md mb-2">主題：{{ info.title }}</h2>
           <p class="text-md mb-2">
             時間：{{
@@ -36,7 +36,7 @@
           </p>
           <p class="text-md mb-2">成員：{{ info.group }}</p>
           <p class="text-md mb-2">描述：{{ info.intro }}</p>
-          <div class="flex items-center w-70 gap-3">
+          <div class="flex items-center w-full md:w-70 gap-3">
             進度：
             <!-- Progress Bar -->
             <div

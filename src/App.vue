@@ -1,20 +1,62 @@
 <template>
   <div
-    v-if="isLoading && ($route.path !== '/' && $route.path !== '/about')"
+    v-if="isLoading && $route.path !== '/' && $route.path !== '/about'"
     class="loading-overlay"
   >
     <div class="loader"></div>
     <p>Loading...</p>
   </div>
   <nav
-    class="absolute z-10 w-full p-12 font-bold text-4xl flex flex-row justify-between items-center"
+    class="absolute z-10 w-full p-4 pb-0 md:p-12 md:pb-0 font-bold text-2xl md:text-4xl flex flex-row justify-between items-center"
   >
     <router-link to="/"><span class="">彰化市中山國民小學</span></router-link>
-    <div class="flex gap-5 text-2xl">
+
+    <!-- Hamburger Button -->
+    <button @click="isMenuOpen = !isMenuOpen" class="md:hidden z-20">
+      <svg
+        v-if="!isMenuOpen"
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-8 w-8"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"
+        />
+      </svg>
+      <svg
+        v-else
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-8 w-8"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </svg>
+    </button>
+
+    <!-- Menu -->
+    <div
+      :class="[
+        'fixed top-0 left-0 w-full h-full bg-white flex flex-col justify-center items-center gap-8 text-3xl transition-transform duration-300 ease-in-out md:relative md:h-auto md:w-auto md:bg-transparent md:flex-row md:gap-5 md:text-2xl',
+        isMenuOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0',
+      ]"
+    >
       <router-link
         v-if="$route.path !== '/'"
         to="/about"
         class="p-2 px-4"
+        @click="isMenuOpen = false"
         :class="{
           'pointer-events-none bg-gradient-to-br from-blue-500 to-red-500 opacity-80 rounded-full':
             $route.path === '/about',
@@ -25,6 +67,7 @@
         v-if="$route.path !== '/'"
         to="/actions"
         class="p-2 px-4"
+        @click="isMenuOpen = false"
         :class="{
           'pointer-events-none bg-gradient-to-br from-blue-500 to-red-500 opacity-80 rounded-full':
             $route.path === '/actions',
@@ -35,6 +78,7 @@
         v-if="$route.path !== '/'"
         to="/sdgs"
         class="p-2 px-4"
+        @click="isMenuOpen = false"
         :class="{
           'pointer-events-none bg-gradient-to-br from-blue-500 to-red-500 opacity-80 rounded-full':
             $route.path === '/sdgs' || $route.path === '/story',
@@ -49,6 +93,7 @@
 import { ref, onMounted } from "vue";
 
 const isLoading = ref(true);
+const isMenuOpen = ref(false);
 
 onMounted(() => {
   setTimeout(() => {

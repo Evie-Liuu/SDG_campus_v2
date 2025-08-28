@@ -8,14 +8,16 @@
         'transition-all duration-1000 ease-out',
         isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full',
       ]"
-      class="w-full mt-40"
+      class="w-full mt-20 md:mt-40"
     >
-      <h1 class="text-4xl md:text-7xl font-bold text-brown-500  me-80">
+      <h1 class="text-4xl md:text-7xl font-bold text-brown-500 md:me-80">
         一起跟領角鴞探索中山國小吧！
       </h1>
     </section>
 
-    <div class="flex flex-col md:flex-row items-center justify-center gap-90">
+    <div
+      class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-90"
+    >
       <!-- Signboard -->
       <section
         :class="[
@@ -24,7 +26,7 @@
             ? 'opacity-100 translate-x-0'
             : 'opacity-0 -translate-x-full',
         ]"
-        class="relative pb-8 scale-170 mt-50 w-[20rem] h-[28rem] flex flex-col items-center justify-center gap-10 text-brown-500 text-3xl font-bold bg-[url(@/assets/images/sign.png)] bg-contain bg-no-repeat bg-center"
+        class="relative pb-8 scale-125 mt-20 md:scale-170 md:mt-50 w-[15rem] h-[21rem] md:w-[20rem] md:h-[28rem] flex flex-col items-center justify-center gap-10 text-brown-500 text-3xl font-bold bg-[url(@/assets/images/sign.png)] bg-contain bg-no-repeat bg-center"
       >
         <router-link
           to="/about"
@@ -52,7 +54,7 @@
           'transition-all duration-1000 ease-out',
           isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full',
         ]"
-        class="relative w-48 h-48 md:w-64 md:h-64 scale-270 me-55 mt-50"
+        class="relative w-48 h-48 md:w-64 md:h-64 scale-150 mt-20 md:scale-270 md:me-55 md:mt-50"
         @mousemove="handleMouseMove"
         @mouseleave="resetEyes"
       >

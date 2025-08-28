@@ -11,9 +11,9 @@
       @update:keyword="updateKeyword"
       class="md:max-w-7xl md:mx-auto flex flex-row justify-between items-center w-full"
     />
-    <section class="grid grid-cols-1 md:grid-cols-3 md:gap-5">
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-5 p-4 md:p-0 md:gap-5">
       <div
-        class="animate-fade-in-up cursor-pointer md:w-md md:mx-auto min-h-80 bg-white rounded-xl shadow-md overflow-hidden flex flex-col gap-5 hover:scale-105"
+        class="animate-fade-in-up cursor-pointer w-full md:mx-auto min-h-80 bg-white rounded-xl shadow-md overflow-hidden flex flex-col gap-5 hover:scale-105"
         v-for="info in paginatedInfo"
         :key="info.id"
         @click="goToStory(info.id)"
