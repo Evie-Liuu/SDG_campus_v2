@@ -1,5 +1,5 @@
 <template>
-  <header class="pt-30 w-full shadow-md z-10">
+  <header class="pt-30 w-full shadow-md z-10 bg-header">
     <div class="container mx-auto flex items-center p-4">
       <div class="w-1/3">
         <router-link to="/sdgs" class="back-home-btn">

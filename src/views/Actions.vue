@@ -1,5 +1,5 @@
 <template>
-  <header class="pt-30 w-full shadow-md z-10">
+  <header class="pt-30 w-full shadow-md z-10 bg-header">
     <div class="container mx-auto flex items-center p-4">
       <div class="w-1/3">
         <router-link to="/" class="back-home-btn">
@@ -13,7 +13,9 @@
       <div class="w-1/3"></div>
     </div>
   </header>
-  <main class="p-10 flex flex-col justify-center items-center gap-8 max-w-7xl md:mx-auto">
+  <main
+    class="p-10 flex flex-col justify-center items-center gap-8 max-w-7xl md:mx-auto"
+  >
     <HeaderTabs
       @update:visibilityTab="updateVisibilityTab"
       @update:keyword="updateKeyword"

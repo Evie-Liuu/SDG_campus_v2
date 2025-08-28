@@ -8,10 +8,18 @@
   </div>
   <nav
     class="absolute z-10 w-full p-4 pb-0 md:p-12 md:pb-0 font-bold md:text-4xl flex flex-row justify-between items-center"
+    :class="[
+      $route.path !== '/' && $route.path !== '/about' ? 'bg-header' : '',
+    ]"
   >
-    <router-link to="/"
-      ><span class="text-5xl font-hspa">彰化市中山國民小學</span></router-link
-    >
+    <router-link to="/">
+      <!-- <img
+        src="../assets/images/Landing/School_Logo.png"
+        alt=""
+        class="absolute inset-0 w-1/2 h-full object-end"
+      /> -->
+      <span class="text-5xl font-hspa">彰化市中山國民小學</span>
+    </router-link>
 
     <!-- Hamburger Button -->
     <button

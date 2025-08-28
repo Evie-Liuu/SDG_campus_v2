@@ -68,6 +68,7 @@
     --color-orange-custom: #e7aa5c;
     --color-blue-custom: #92c3d4;
     --color-green-custom: #9bcf9f;
+    --color-header: #F4F0EB;
     --color-brown-500: rgba(77, 50, 12, 255);
 
     --text-xl: 1.5rem;
@@ -88,7 +89,8 @@ body {
     /* font-family: 'Asap', sans-serif; */
     font-family: 'HanyiSentyMarshmallow', sans-serif;
     /* font-family: 'Jf-Openhuninn', serif; */
-    background-color: #F4F0EB;
+    /* background-color: #F4F0EB; */
+    background-color: #e9e8e7;
     font-size:1.6rem;
 }
 
