@@ -10,7 +10,7 @@
         :key="tab.value"
         :value="tab.value"
       >
-        {{ tab.title }}
+        {{ tab.title.replace(/<br\s*\/?>/g, '') }}
         {{
           props.counts && props.counts[tab.value] !== undefined
             ? `(${props.counts[tab.value]})`

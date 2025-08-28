@@ -3,7 +3,9 @@
     <div class="loader"></div>
     <p>Loading...</p>
   </div>
-  <div class="w-screen h-screen overflow-hidden bg-rice-500">
+  <div
+    class="w-screen h-screen bg-[url(@/assets/images/about-bg.jpg)] bg-repeat bg-center overflow-hidden"
+  >
     <!-- <nav class="absolute z-10 left-50 top-30 flex flex-col text-2xl">
       <router-link to="/" class="bg-white rounded-md px-8 py-3"
         >回首頁</router-link
