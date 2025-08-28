@@ -17,6 +17,7 @@
     <HeaderTabs
       @update:visibilityTab="updateVisibilityTab"
       @update:keyword="updateKeyword"
+      :counts="actionCounts"
       class="md:max-w-7xl md:mx-auto flex flex-row justify-between items-center w-full"
     />
     <section class="flex flex-col gap-5 w-full px-4 md:px-0">
@@ -101,6 +102,27 @@ import { ref, computed } from "vue";
 import infos from "@/data/CS_actions.json";
 import typeTags from "@/data/SDGs_goal.json";
 import HeaderTabs from "@/components/HeaderTabs.vue";
+
+const actionCounts = computed(() => {
+  const counts = {};
+  typeTags.forEach((tag) => {
+    counts[tag.value] = 0;
+  });
+
+  infos.forEach((info) => {
+    info.types.forEach((type) => {
+      if (counts.hasOwnProperty(type)) {
+        counts[type]++;
+      }
+    });
+  });
+
+  if (counts.hasOwnProperty(0)) {
+    counts[0] = infos.length;
+  }
+
+  return counts;
+});
 
 const visibilityTab = ref(0);
 const keyword = ref("");

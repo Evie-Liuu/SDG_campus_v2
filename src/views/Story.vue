@@ -13,11 +13,12 @@
       <div class="w-1/3"></div>
     </div>
   </header>
-  <main class="p-10 flex flex-col justify-center items-center gap-8">
+  <main class="p-10 flex flex-col items-center gap-8 md:w-7xl md:mx-auto">
     <HeaderTabs
       @update:visibilityTab="updateVisibilityTab"
       @update:keyword="updateKeyword"
-      class="md:max-w-7xl md:mx-auto flex flex-row justify-between items-center w-full"
+      :counts="actionCounts"
+      class="md:mx-auto flex flex-row justify-between items-center w-full"
     />
     <section class="grid grid-cols-1 md:grid-cols-3 gap-5 p-4 md:p-0 md:gap-5">
       <div
@@ -62,7 +63,29 @@
 import { ref, computed } from "vue";
 import { useRouter } from "vue-router";
 import infos from "@/data/ChungShan.json";
+import typeTags from "@/data/SDGs_goal.json";
 import HeaderTabs from "@/components/HeaderTabs.vue";
+
+const actionCounts = computed(() => {
+  const counts = {};
+  typeTags.forEach((tag) => {
+    counts[tag.value] = 0;
+  });
+
+  infos.forEach((info) => {
+    info.types.forEach((type) => {
+      if (counts.hasOwnProperty(type)) {
+        counts[type]++;
+      }
+    });
+  });
+
+  if (counts.hasOwnProperty(0)) {
+    counts[0] = infos.length;
+  }
+
+  return counts;
+});
 
 const visibilityTab = ref(0);
 const keyword = ref("");
