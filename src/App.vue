@@ -18,7 +18,7 @@
         alt=""
         class="absolute inset-0 w-1/2 h-full object-end"
       /> -->
-      <span class="text-5xl font-hspa">彰化市中山國民小學</span>
+      <span class="md:text-3xl text-5xl font-hspa">彰化市中山國民小學</span>
     </router-link>
 
     <!-- Hamburger Button -->
