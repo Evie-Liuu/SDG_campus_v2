@@ -20,11 +20,13 @@
       <div
         class="col-span-1 md:col-span-3 h-48 md:h-auto border p-4 bg-[url(@/assets/images/data-bg.jpg)] bg-cover bg-top overflow-hidden flex items-center justify-center animate-fade-in-left animate-delay-100 hover:shadow-[10px_5px_10px_-3px_rgba(0,0,0,0.8)] hover:font-bold"
       >
+        <div class="absolute inset-0 bg-black/40"></div>
         數據呈現
       </div>
       <div
         class="col-span-1 h-48 md:h-auto border p-4 flex items-center justify-center animate-fade-in-left animate-delay-200 hover:shadow-[10px_5px_10px_-3px_rgba(0,0,0,0.8)] hover:font-bold"
       >
+        <div class="absolute inset-0 bg-black/40"></div>
         下載資源
       </div>
       <router-link

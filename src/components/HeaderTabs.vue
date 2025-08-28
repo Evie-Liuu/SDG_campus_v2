@@ -85,8 +85,9 @@
     </li>
   </ul>
 
-  <div ref="rightTools" class="relative flex items-center">
-    <button @click="showSearch = !showSearch" class="p-2">
+  <div ref="rightTools" class="relative flex items-center w-full justify-center md:justify-end  md:pe-10">
+    <button @click="showSearch = true" class="p-2">
+    <!-- <button @click="showSearch = !showSearch" class="p-2"> -->
       <i class="fa-solid fa-magnifying-glass text-2xl"></i>
     </button>
     <transition name="fade">
@@ -95,7 +96,7 @@
         v-model="keyword"
         type="text"
         placeholder="搜尋標題..."
-        class="border rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-blue-400 transition w-40"
+        class="border rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-blue-400 transition w-57 md:w-40"
       />
     </transition>
     <a
@@ -146,7 +147,7 @@ const sortedHeaderTabs = computed(() => {
   return result;
 });
 
-const showSearch = ref(false);
+const showSearch = ref(true);
 const keyword = ref("");
 const tabContainer = ref(null);
 const rightTools = ref(null);
@@ -166,8 +167,9 @@ const updateTabs = () => {
   if (!tabContainer.value || !rightTools.value) return;
   const container = tabContainer.value.parentNode;
   if (!container) return;
-  const availableWidth =
-    container.clientWidth - rightTools.value.offsetWidth - 20;
+  const availableWidth = container.clientWidth - 20;
+  //   const availableWidth =
+  //     container.clientWidth - rightTools.value.offsetWidth - 20;
   const moreButtonWidth = 350;
   let usedWidth = 0;
   const newVisible = [];
