@@ -1,11 +1,19 @@
 <template>
-  <main class="pt-30 flex flex-col justify-center items-center gap-8">
-    <nav class="absolute z-10 left-50 top-30 flex flex-col text-2xl">
-      <router-link to="/sdgs" class="bg-white rounded-md px-8 py-3"
-        >回上頁</router-link
-      >
-    </nav>
-    <h1 class="text-4xl font-bold">故事牆</h1>
+  <header class="pt-30 w-full shadow-md z-10">
+    <div class="container mx-auto flex items-center p-4">
+      <div class="w-1/3">
+        <router-link to="/sdgs" class="back-home-btn">
+          <span class="text">回上頁</span>
+          <span class="icon">←</span>
+        </router-link>
+      </div>
+      <div class="w-1/3 text-center">
+        <h1 class="text-2xl font-bold">故事牆</h1>
+      </div>
+      <div class="w-1/3"></div>
+    </div>
+  </header>
+  <main class="p-10 flex flex-col justify-center items-center gap-8">
     <HeaderTabs
       @update:visibilityTab="updateVisibilityTab"
       @update:keyword="updateKeyword"
@@ -23,11 +31,11 @@
           alt="Card Image"
           class="h-45 object-cover"
         />
-        <summary class="p-4 flex flex-col justify-center">
+        <div class="p-4 flex flex-col justify-center">
           <h2 class="text-xl font-bold mb-2">{{ info.title }}</h2>
           <p class="text-gray-600 text-sm">{{ info.intro }}</p>
           <p class="text-gray-600 text-sm text-right pe-3">更多</p>
-        </summary>
+        </div>
       </div>
     </section>
     <!-- Pagination -->

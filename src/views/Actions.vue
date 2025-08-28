@@ -1,11 +1,19 @@
 <template>
-  <main class="pt-30 flex flex-col justify-center items-center gap-8">
-    <nav class="absolute z-10 left-50 top-30 flex flex-col text-2xl">
-      <router-link to="/" class="bg-white rounded-md px-8 py-3"
-        >回首頁</router-link
-      >
-    </nav>
-    <h1 class="text-4xl font-bold">行動追蹤</h1>
+  <header class="pt-30 w-full shadow-md z-10">
+    <div class="container mx-auto flex items-center p-4">
+      <div class="w-1/3">
+        <router-link to="/" class="back-home-btn">
+          <span class="text">回首頁</span>
+          <span class="icon">←</span>
+        </router-link>
+      </div>
+      <div class="w-1/3 text-center">
+        <h1 class="text-2xl font-bold">行動追蹤</h1>
+      </div>
+      <div class="w-1/3"></div>
+    </div>
+  </header>
+  <main class="p-10 flex flex-col justify-center items-center gap-8">
     <HeaderTabs
       @update:visibilityTab="updateVisibilityTab"
       @update:keyword="updateKeyword"
@@ -13,17 +21,19 @@
     />
     <section class="flex flex-col gap-5 w-full px-4 md:px-0">
       <div
-        class="animate-fade-in-up cursor-pointer w-full md:w-7xl md:mx-auto min-h-96 md:min-h-80 bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row hover:scale-105"
+        class="animate-fade-in-up cursor-pointer w-full md:max-w-7xl md:mx-auto min-h-96 md:min-h-80 bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row hover:scale-105"
         v-for="info in paginatedInfo"
         :key="info.id"
         @click="goToActions(info.id)"
       >
-        <img
-          src="../assets/images/sdgs-bg.jpg"
-          alt="Card Image"
-          class="w-full h-64 md:h-full md:w-1/2 object-cover object-center overflow-hidden"
-        />
-        <summary class="p-6 md:p-15 flex flex-col justify-center w-full">
+        <div class="relative w-full h-64 md:h-auto md:w-1/2">
+          <img
+            src="../assets/images/sdgs-bg.jpg"
+            alt="Card Image"
+            class="absolute inset-0 w-full h-full object-cover object-center"
+          />
+        </div>
+        <div class="p-6 md:p-15 flex flex-col justify-center w-full">
           <h2 class="text-md mb-2">主題：{{ info.title }}</h2>
           <p class="text-md mb-2">
             時間：{{
@@ -63,7 +73,7 @@
             </span>
           </div>
           <p class="text-gray-600 text-sm text-right">更多</p>
-        </summary>
+        </div>
       </div>
     </section>
     <!-- Pagination -->

@@ -1,11 +1,19 @@
 <template>
-  <main class="pt-30">
-    <nav class="absolute z-10 left-50 top-30 flex flex-col text-2xl">
-      <router-link to="/" class="bg-white rounded-md px-8 py-3"
-        >回首頁</router-link
-      >
-    </nav>
-    <h1 class="text-4xl font-bold text-center">成果展示</h1>
+  <header class="pt-30 w-full shadow-md z-10">
+    <div class="container mx-auto flex items-center p-4">
+      <div class="w-1/3">
+        <router-link to="/" class="back-home-btn">
+          <span class="text">回首頁</span>
+          <span class="icon">←</span>
+        </router-link>
+      </div>
+      <div class="w-1/3 text-center">
+        <h1 class="text-2xl font-bold">成果展示</h1>
+      </div>
+      <div class="w-1/3"></div>
+    </div>
+  </header>
+  <main class="">
     <section
       class="grid grid-cols-1 md:grid-cols-4 gap-4 p-4 md:p-20 pt-10 text-center text-3xl"
     >

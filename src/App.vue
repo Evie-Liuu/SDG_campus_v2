@@ -13,42 +13,13 @@
 
     <!-- Hamburger Button -->
     <button @click="isMenuOpen = !isMenuOpen" class="md:hidden z-20">
-      <svg
-        v-if="!isMenuOpen"
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-8 w-8"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M4 6h16M4 12h16m-7 6h7"
-        />
-      </svg>
-      <svg
-        v-else
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-8 w-8"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M6 18L18 6M6 6l12 12"
-        />
-      </svg>
+      <i class="fa-solid fa-bars"></i>
     </button>
 
     <!-- Menu -->
     <div
       :class="[
-        'fixed top-0 left-0 w-full h-full bg-white flex flex-col justify-center items-center gap-8 text-3xl transition-transform duration-300 ease-in-out md:relative md:h-auto md:w-auto md:bg-transparent md:flex-row md:gap-5 md:text-2xl',
+        'fixed top-0 left-0 w-full h-full bg-white flex flex-col justify-center items-center gap-8 text-3xl transition-transform duration-300 ease-in-out md:relative md:h-auto md:w-auto md:bg-transparent md:flex-row md:gap-3 md:text-2xl',
         isMenuOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0',
       ]"
     >

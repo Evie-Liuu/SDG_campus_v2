@@ -13,7 +13,7 @@
       <iframe
         src="https://www.thinglink.com/view/scene/2016738261199749797"
         type="text/html"
-        class="w-full h-full pt-20"
+        class="w-full h-full pt-27"
         style="border: none"
         webkitallowfullscreen
         mozallowfullscreen

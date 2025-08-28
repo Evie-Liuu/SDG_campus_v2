@@ -133,3 +133,18 @@ body {
     transform: translateY(-5px);
     transition: transform 0.3s ease;
 }
+
+.back-home-btn .icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .back-home-btn .text {
+    display: none;
+  }
+
+  .back-home-btn .icon {
+    display: inline;
+    font-size: 1.5rem;
+  }
+}

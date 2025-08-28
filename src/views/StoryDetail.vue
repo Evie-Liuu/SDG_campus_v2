@@ -1,10 +1,18 @@
 <template>
-  <main class="pt-30 max-w-4xl mx-auto p-4">
-    <nav class="absolute z-10 left-50 top-30 flex flex-col text-2xl">
-      <router-link to="/story" class="bg-white rounded-md px-8 py-3"
-        >回上頁</router-link
-      >
-    </nav>
+  <header class="pt-30 w-full z-10">
+    <div class="container mx-auto flex items-center p-4">
+      <div class="w-1/3">
+        <router-link to="/story" class="back-home-btn">
+          <span class="text">回上頁</span>
+          <span class="icon">←</span>
+        </router-link>
+      </div>
+      <div class="w-1/3 text-center">
+      </div>
+      <div class="w-1/3"></div>
+    </div>
+  </header>
+  <main class="max-w-4xl mx-auto p-4">
     <section class="animate-fade-in-up flex flex-col gap-8" v-if="selectedInfo">
       <!-- Article Header -->
       <div
@@ -121,7 +129,10 @@ const bgImageStyle = computed(() => {
   } catch (e) {
     console.error(e);
     // Fallback if the image URL is invalid
-    const fallbackUrl = new URL('../assets/images/CS_school.png', import.meta.url).href;
+    const fallbackUrl = new URL(
+      "../assets/images/CS_school.png",
+      import.meta.url
+    ).href;
     return { backgroundImage: `url(${fallbackUrl})` };
   }
 });
