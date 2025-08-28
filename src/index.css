@@ -59,6 +59,8 @@
 @theme {
     --font-huninn: 'jf-openhuninn', 'sans-serif';
     --font-asap: 'Asap', 'sans-serif';
+    --font-hsp: 'HanyiSentyPagoda', 'sans-serif';
+    --font-hspa: 'HanyiSentyPailouArch', 'sans-serif';
 
     --color-rrd-100: #ff0000;
     --color-custom-dark: #ff3737;
@@ -68,6 +70,11 @@
     --color-green-custom: #9bcf9f;
     --color-brown-500: rgba(77, 50, 12, 255);
 
+    --text-xl: 1.5rem;
+    --text-2xl: 1.75rem;
+    --text-3xl: 2.25rem;
+    --text-4xl: 2.5rem;
+    --text-5xl: 3.3rem;
     --text-shadow-outline: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     --text-shadow-3d: 2px 2px 4px rgba(0, 0, 0, 0.6);
 
@@ -78,10 +85,11 @@
 }
 
 body {
-    font-family: 'Asap', sans-serif;
+    /* font-family: 'Asap', sans-serif; */
+    font-family: 'HanyiSentyMarshmallow', sans-serif;
     /* font-family: 'Jf-Openhuninn', serif; */
-    /* font-family: 'Comic Neue', serif; */
     background-color: #F4F0EB;
+    font-size:1.6rem;
 }
 
 .text-3d {

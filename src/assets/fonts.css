@@ -6,8 +6,34 @@
 }
 
 @font-face {
-  font-family: 'Asap';
-  src: url('./fonts/asap/Asap-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
+    font-family: 'HanyiSentyMarshmallow';
+    src: url('./fonts/HanyiSentyMarshmallow-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HanyiSentyPagoda';
+    src: url('./fonts/HanyiSentyPagoda-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HanyiSentyPailouArch';
+    src: url('./fonts/HanyiSentyPailouArch-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HanyiSentyTang';
+    src: url('./fonts/HanyiSentyTang-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Asap';
+    src: url('./fonts/asap/Asap-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
 }

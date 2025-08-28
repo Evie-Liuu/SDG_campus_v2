@@ -1,6 +1,6 @@
 <template>
   <main
-    class="font-huninn h-screen w-screen flex flex-col items-center justify-center text-center bg-[url(@/assets/images/CS_school.png)] bg-cover bg-center overflow-hidden"
+    class="h-screen w-screen flex flex-col items-center justify-center text-center bg-[url(@/assets/images/CS_school.png)] bg-cover bg-center overflow-hidden"
   >
     <!-- Title -->
     <section
@@ -44,7 +44,7 @@
             ? 'opacity-100 translate-x-0'
             : 'opacity-0 -translate-x-full',
         ]"
-        class="relative hidden lg:order-1 lg:flex flex-col items-center justify-center gap-10 text-brown-500 text-3xl font-bold bg-[url(@/assets/images/sign.png)] bg-contain bg-no-repeat bg-center pb-8 scale-125 mt-20 lg:scale-170 lg:mt-50 w-[15rem] h-[21rem] lg:w-[20rem] lg:h-[28rem]"
+        class="relative hidden lg:order-1 lg:flex flex-col items-center justify-center gap-9 text-brown-500 text-3xl font-bold bg-[url(@/assets/images/sign.png)] bg-contain bg-no-repeat bg-center pb-6 scale-125 mt-20 lg:scale-170 lg:mt-50 w-[15rem] h-[21rem] lg:w-[20rem] lg:h-[28rem]"
       >
         <router-link
           to="/about"
@@ -78,19 +78,19 @@
       >
         <router-link
           to="/about"
-          class="w-full text-shadow-3d bg-orange-custom text-white px-8 py-3 rounded-full text-xl font-bold shadow-[0_3px_0_0_#da9346] transition-transform hover:scale-105"
+          class="w-full text-shadow-3d bg-orange-400 text-white px-8 py-3 rounded-full text-xl font-bold shadow-[0_3px_0_0_#da9346] transition-transform hover:scale-105"
         >
           校園探索
         </router-link>
         <router-link
           to="/actions"
-          class="w-full text-shadow-3d bg-blue-custom text-white px-8 py-3 rounded-full text-xl font-bold shadow-[0_3px_0_0_#78b6cb] transition-transform hover:scale-105"
+          class="w-full text-shadow-3d bg-blue-400 text-white px-8 py-3 rounded-full text-xl font-bold shadow-[0_3px_0_0_#78b6cb] transition-transform hover:scale-105"
         >
           SDGs行動
         </router-link>
         <router-link
           to="/sdgs"
-          class="w-full text-shadow-3d bg-green-custom text-white px-8 py-3 rounded-full text-xl font-bold shadow-[0_3px_0_0_#82b989] transition-transform hover:scale-105"
+          class="w-full text-shadow-3d bg-green-600 text-white px-8 py-3 rounded-full text-xl font-bold shadow-[0_3px_0_0_#82b989] transition-transform hover:scale-105"
         >
           SDGs成果
         </router-link>

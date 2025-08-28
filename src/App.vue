@@ -7,9 +7,11 @@
     <p>Loading...</p>
   </div>
   <nav
-    class="absolute z-10 w-full p-4 pb-0 md:p-12 md:pb-0 font-bold text-2xl md:text-4xl flex flex-row justify-between items-center"
+    class="absolute z-10 w-full p-4 pb-0 md:p-12 md:pb-0 font-bold md:text-4xl flex flex-row justify-between items-center"
   >
-    <router-link to="/"><span class="">彰化市中山國民小學</span></router-link>
+    <router-link to="/"
+      ><span class="text-5xl font-hspa">彰化市中山國民小學</span></router-link
+    >
 
     <!-- Hamburger Button -->
     <button
@@ -33,7 +35,7 @@
         class="p-2 px-4"
         @click="isMenuOpen = false"
         :class="{
-          'pointer-events-none bg-gradient-to-br from-blue-500 to-red-500 opacity-80 rounded-full':
+          'pointer-events-none bg-gradient-to-br from-green-600 to-yellow-400 opacity-80 rounded-full':
             $route.path === '/about',
         }"
         >校園探索</router-link
@@ -44,7 +46,7 @@
         class="p-2 px-4"
         @click="isMenuOpen = false"
         :class="{
-          'pointer-events-none bg-gradient-to-br from-blue-500 to-red-500 opacity-80 rounded-full':
+          'pointer-events-none bg-gradient-to-br from-green-600 to-yellow-400 opacity-80 rounded-full':
             $route.path === '/actions',
         }"
         >SDGs行動</router-link
@@ -55,7 +57,7 @@
         class="p-2 px-4"
         @click="isMenuOpen = false"
         :class="{
-          'pointer-events-none bg-gradient-to-br from-blue-500 to-red-500 opacity-80 rounded-full':
+          'pointer-events-none bg-gradient-to-br from-green-600 to-yellow-400 opacity-80 rounded-full':
             $route.path === '/sdgs' || $route.path.includes('/story'),
         }"
         >SDGs成果</router-link
