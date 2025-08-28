@@ -1,14 +1,7 @@
 <template>
   <main
-    class="h-screen w-screen flex flex-col items-center justify-center text-center bg-[url(@/assets/images/Landing/Background.png)] bg-cover bg-center overflow-hidden"
+    class="h-screen w-screen flex flex-col items-center justify-center text-center bg-[url(@/assets/images/Landing/Main-Page_Base_All.png)] bg-cover bg-center overflow-hidden"
   >
-    <picture>
-      <img
-        src="../assets/images/Landing/School_Watercolor.png"
-        alt=""
-        class="absolute inset-0 w-1/2 h-full object-end"
-      />
-    </picture>
     <!-- Title -->
     <section
       :class="[
@@ -31,13 +24,13 @@
           'transition-all duration-1000 ease-out',
           isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full',
         ]"
-        class="relative w-48 h-48 lg:w-64 lg:h-64 scale-150 lg:order-2 mt-20 lg:scale-270 lg:me-55 lg:mt-50"
+        class="relative w-48 h-48 lg:w-64 lg:h-64 order-1 mt-20 lg:scale-270 lg:me-55"
         @mousemove="handleMouseMove"
         @mouseleave="resetEyes"
       >
         <img
-          src="@/assets/images/owl-body.png"
-          class="w-full h-full pointer-events-none select-none"
+          src="@/assets/images/Landing/Otus-lettia_Watercolor.png"
+          class="scale-80 pointer-events-none select-none"
           alt="Owl"
         />
         <!-- Eye tracking logic can be added back here -->
@@ -51,7 +44,7 @@
             ? 'opacity-100 translate-x-0'
             : 'opacity-0 -translate-x-full',
         ]"
-        class="relative hidden lg:order-1 lg:flex flex-col items-center justify-center gap-9 text-brown-500 text-3xl font-bold bg-[url(@/assets/images/sign.png)] bg-contain bg-no-repeat bg-center pb-6 scale-125 mt-20 lg:scale-170 lg:mt-50 w-[15rem] h-[21rem] lg:w-[20rem] lg:h-[28rem]"
+        class="relative hidden order-2 lg:flex flex-col items-center justify-center gap-9 text-brown-500 text-3xl font-bold bg-[url(@/assets/images/sign.png)] bg-contain bg-no-repeat bg-center pb-6 scale-125 mt-20 lg:scale-170 lg:mt-50 w-[15rem] h-[21rem] lg:w-[20rem] lg:h-[28rem]"
       >
         <router-link
           to="/about"

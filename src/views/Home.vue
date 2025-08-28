@@ -8,7 +8,7 @@
         'transition-all duration-1000 ease-out',
         isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full',
       ]"
-      class="w-full mt-20 lg:mt-40"
+      class="w-full mt-20 lg:mt-60"
     >
       <h1 class="text-4xl lg:text-7xl font-bold text-brown-500 lg:me-80">
         一起跟領角鴞探索中山國小吧！
@@ -24,7 +24,7 @@
           'transition-all duration-1000 ease-out',
           isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full',
         ]"
-        class="relative w-48 h-48 lg:w-64 lg:h-64 scale-150 lg:order-2 mt-20 lg:scale-270 lg:me-55 lg:mt-50"
+        class="relative w-48 h-48 lg:w-64 lg:h-64 scale-150 lg:order-2 mt-20 lg:scale-270 lg:me-55 lg:mt-35"
         @mousemove="handleMouseMove"
         @mouseleave="resetEyes"
       >
@@ -44,7 +44,7 @@
             ? 'opacity-100 translate-x-0'
             : 'opacity-0 -translate-x-full',
         ]"
-        class="relative hidden lg:order-1 lg:flex flex-col items-center justify-center gap-9 text-brown-500 text-3xl font-bold bg-[url(@/assets/images/sign.png)] bg-contain bg-no-repeat bg-center pb-6 scale-125 mt-20 lg:scale-170 lg:mt-50 w-[15rem] h-[21rem] lg:w-[20rem] lg:h-[28rem]"
+        class="relative hidden lg:order-1 lg:flex flex-col items-center justify-center gap-9 text-brown-500 text-3xl font-bold bg-[url(@/assets/images/sign.png)] bg-contain bg-no-repeat bg-center pb-6 scale-125 mt-20 lg:scale-170 lg:mt-35 w-[15rem] h-[21rem] lg:w-[20rem] lg:h-[28rem]"
       >
         <router-link
           to="/about"
