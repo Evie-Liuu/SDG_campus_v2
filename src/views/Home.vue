@@ -24,7 +24,7 @@
           'transition-all duration-1000 ease-out',
           isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full',
         ]"
-        class="relative w-48 h-48 md:w-64 md:h-64 scale-150 mt-20 md:scale-270 md:me-55 md:mt-50"
+        class="relative w-48 h-48 md:w-64 md:h-64 scale-150 md:order-2 mt-20 md:scale-270 md:me-55 md:mt-50"
         @mousemove="handleMouseMove"
         @mouseleave="resetEyes"
       >
@@ -44,7 +44,7 @@
             ? 'opacity-100 translate-x-0'
             : 'opacity-0 -translate-x-full',
         ]"
-        class="relative hidden md:flex flex-col items-center justify-center gap-10 text-brown-500 text-3xl font-bold bg-[url(@/assets/images/sign.png)] bg-contain bg-no-repeat bg-center pb-8 scale-125 mt-20 md:scale-170 md:mt-50 w-[15rem] h-[21rem] md:w-[20rem] md:h-[28rem]"
+        class="relative hidden md:order-1 md:flex flex-col items-center justify-center gap-10 text-brown-500 text-3xl font-bold bg-[url(@/assets/images/sign.png)] bg-contain bg-no-repeat bg-center pb-8 scale-125 mt-20 md:scale-170 md:mt-50 w-[15rem] h-[21rem] md:w-[20rem] md:h-[28rem]"
       >
         <router-link
           to="/about"

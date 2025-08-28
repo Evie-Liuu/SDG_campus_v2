@@ -15,7 +15,7 @@
   </header>
   <main class="">
     <section
-      class="grid grid-cols-1 md:grid-cols-4 gap-4 p-4 md:p-20 pt-10 text-center text-3xl"
+      class="grid grid-cols-1 md:grid-cols-4 gap-5 p-4 md:p-20 pt-10 text-center text-3xl md:min-h-230"
     >
       <div
         class="col-span-1 md:col-span-3 h-48 md:h-auto border p-4 bg-[url(@/assets/images/data-bg.jpg)] bg-cover bg-top overflow-hidden flex items-center justify-center animate-fade-in-left animate-delay-100 hover:shadow-[10px_5px_10px_-3px_rgba(0,0,0,0.8)] hover:font-bold"

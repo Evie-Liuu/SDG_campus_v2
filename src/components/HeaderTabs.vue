@@ -25,7 +25,7 @@
           >更多 ▾</a
         >
         <ul
-          class="absolute top-7 left-1 bg-white shadow rounded hidden group-hover:block"
+          class="absolute z-10 top-7 left-1 bg-white shadow rounded hidden group-hover:block"
         >
           <li v-for="tab in hiddenTabs" :key="tab.value">
             <a

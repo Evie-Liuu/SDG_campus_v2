@@ -12,7 +12,11 @@
     <router-link to="/"><span class="">彰化市中山國民小學</span></router-link>
 
     <!-- Hamburger Button -->
-    <button @click="isMenuOpen = !isMenuOpen" class="md:hidden z-20">
+    <button
+      v-if="$route.path !== '/'"
+      @click="isMenuOpen = !isMenuOpen"
+      class="md:hidden z-20"
+    >
       <i class="fa-solid fa-bars"></i>
     </button>
 
