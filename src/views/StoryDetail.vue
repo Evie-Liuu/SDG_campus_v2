@@ -1,5 +1,5 @@
 <template>
-  <header class="pt-30 w-full z-10">
+  <header class="pt-30 w-full z-10 shadow-md">
     <div class="container mx-auto flex items-center p-4">
       <div class="w-1/3">
         <router-link to="/story" class="back-home-btn">
@@ -7,12 +7,11 @@
           <span class="icon">←</span>
         </router-link>
       </div>
-      <div class="w-1/3 text-center">
-      </div>
+      <div class="w-1/3 text-center"></div>
       <div class="w-1/3"></div>
     </div>
   </header>
-  <main class="max-w-4xl mx-auto p-4">
+  <main class="max-w-4xl mx-auto p-4 pt-10">
     <section class="animate-fade-in-up flex flex-col gap-8" v-if="selectedInfo">
       <!-- Article Header -->
       <div

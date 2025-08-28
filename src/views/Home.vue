@@ -8,15 +8,15 @@
         'transition-all duration-1000 ease-out',
         isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full',
       ]"
-      class="w-full mt-20 md:mt-40"
+      class="w-full mt-20 lg:mt-40"
     >
-      <h1 class="text-4xl md:text-7xl font-bold text-brown-500 md:me-80">
+      <h1 class="text-4xl lg:text-7xl font-bold text-brown-500 lg:me-80">
         一起跟領角鴞探索中山國小吧！
       </h1>
     </section>
 
     <div
-      class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-90"
+      class="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-90"
     >
       <!-- Owl -->
       <div
@@ -24,7 +24,7 @@
           'transition-all duration-1000 ease-out',
           isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full',
         ]"
-        class="relative w-48 h-48 md:w-64 md:h-64 scale-150 md:order-2 mt-20 md:scale-270 md:me-55 md:mt-50"
+        class="relative w-48 h-48 lg:w-64 lg:h-64 scale-150 lg:order-2 mt-20 lg:scale-270 lg:me-55 lg:mt-50"
         @mousemove="handleMouseMove"
         @mouseleave="resetEyes"
       >
@@ -44,7 +44,7 @@
             ? 'opacity-100 translate-x-0'
             : 'opacity-0 -translate-x-full',
         ]"
-        class="relative hidden md:order-1 md:flex flex-col items-center justify-center gap-10 text-brown-500 text-3xl font-bold bg-[url(@/assets/images/sign.png)] bg-contain bg-no-repeat bg-center pb-8 scale-125 mt-20 md:scale-170 md:mt-50 w-[15rem] h-[21rem] md:w-[20rem] md:h-[28rem]"
+        class="relative hidden lg:order-1 lg:flex flex-col items-center justify-center gap-10 text-brown-500 text-3xl font-bold bg-[url(@/assets/images/sign.png)] bg-contain bg-no-repeat bg-center pb-8 scale-125 mt-20 lg:scale-170 lg:mt-50 w-[15rem] h-[21rem] lg:w-[20rem] lg:h-[28rem]"
       >
         <router-link
           to="/about"
@@ -74,7 +74,7 @@
             ? 'opacity-100 translate-x-0'
             : 'opacity-0 -translate-x-full',
         ]"
-        class="flex md:hidden flex-col items-center justify-center gap-4 mt-8 w-64"
+        class="flex lg:hidden flex-col items-center justify-center gap-4 mt-8 w-64"
       >
         <router-link
           to="/about"

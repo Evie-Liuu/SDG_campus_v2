@@ -13,7 +13,7 @@
       <div class="w-1/3"></div>
     </div>
   </header>
-  <main class="p-10 flex flex-col justify-center items-center gap-8 md:w-7xl md:mx-auto">
+  <main class="p-10 flex flex-col justify-center items-center gap-8 max-w-7xl md:mx-auto">
     <HeaderTabs
       @update:visibilityTab="updateVisibilityTab"
       @update:keyword="updateKeyword"

@@ -56,7 +56,7 @@
         @click="isMenuOpen = false"
         :class="{
           'pointer-events-none bg-gradient-to-br from-blue-500 to-red-500 opacity-80 rounded-full':
-            $route.path === '/sdgs' || $route.path === '/story',
+            $route.path === '/sdgs' || $route.path.includes('/story'),
         }"
         >SDGs成果</router-link
       >
