@@ -43,6 +43,7 @@
         transform: translateX(0);
     }
 }
+
 @keyframes fadeInUp {
     0% {
         opacity: 0;
@@ -62,7 +63,13 @@
     --color-rrd-100: #ff0000;
     --color-custom-dark: #ff3737;
     --color-rice-500: #f6f6f6;
+    --color-orange-custom: #e7aa5c;
+    --color-blue-custom: #92c3d4;
+    --color-green-custom: #9bcf9f;
     --color-brown-500: rgba(77, 50, 12, 255);
+
+    --text-shadow-outline: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    --text-shadow-3d: 2px 2px 4px rgba(0, 0, 0, 0.6);
 
     --animation-bounce-x: bounce-x 2s ease-in-out infinite;
     --animate-fade-in-left: fadeInLeft 0.8s ease-out forwards;
@@ -135,16 +142,16 @@ body {
 }
 
 .back-home-btn .icon {
-  display: none;
+    display: none;
 }
 
 @media (max-width: 768px) {
-  .back-home-btn .text {
-    display: none;
-  }
+    .back-home-btn .text {
+        display: none;
+    }
 
-  .back-home-btn .icon {
-    display: inline;
-    font-size: 1.5rem;
-  }
+    .back-home-btn .icon {
+        display: inline;
+        font-size: 1.5rem;
+    }
 }

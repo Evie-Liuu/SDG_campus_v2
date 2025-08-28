@@ -18,7 +18,25 @@
     <div
       class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-90"
     >
-      <!-- Signboard -->
+      <!-- Owl -->
+      <div
+        :class="[
+          'transition-all duration-1000 ease-out',
+          isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full',
+        ]"
+        class="relative w-48 h-48 md:w-64 md:h-64 scale-150 mt-20 md:scale-270 md:me-55 md:mt-50"
+        @mousemove="handleMouseMove"
+        @mouseleave="resetEyes"
+      >
+        <img
+          src="@/assets/images/owl-body.png"
+          class="w-full h-full pointer-events-none select-none"
+          alt="Owl"
+        />
+        <!-- Eye tracking logic can be added back here -->
+      </div>
+
+      <!-- Signboard for Desktop -->
       <section
         :class="[
           'transition-all duration-1000 ease-out',
@@ -26,7 +44,7 @@
             ? 'opacity-100 translate-x-0'
             : 'opacity-0 -translate-x-full',
         ]"
-        class="relative pb-8 scale-125 mt-20 md:scale-170 md:mt-50 w-[15rem] h-[21rem] md:w-[20rem] md:h-[28rem] flex flex-col items-center justify-center gap-10 text-brown-500 text-3xl font-bold bg-[url(@/assets/images/sign.png)] bg-contain bg-no-repeat bg-center"
+        class="relative hidden md:flex flex-col items-center justify-center gap-10 text-brown-500 text-3xl font-bold bg-[url(@/assets/images/sign.png)] bg-contain bg-no-repeat bg-center pb-8 scale-125 mt-20 md:scale-170 md:mt-50 w-[15rem] h-[21rem] md:w-[20rem] md:h-[28rem]"
       >
         <router-link
           to="/about"
@@ -48,23 +66,35 @@
         </router-link>
       </section>
 
-      <!-- Owl -->
-      <div
+      <!-- Buttons for Mobile -->
+      <section
         :class="[
           'transition-all duration-1000 ease-out',
-          isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full',
+          isLoaded
+            ? 'opacity-100 translate-x-0'
+            : 'opacity-0 -translate-x-full',
         ]"
-        class="relative w-48 h-48 md:w-64 md:h-64 scale-150 mt-20 md:scale-270 md:me-55 md:mt-50"
-        @mousemove="handleMouseMove"
-        @mouseleave="resetEyes"
+        class="flex md:hidden flex-col items-center justify-center gap-4 mt-8 w-64"
       >
-        <img
-          src="@/assets/images/owl-body.png"
-          class="w-full h-full pointer-events-none select-none"
-          alt="Owl"
-        />
-        <!-- Eye tracking logic can be added back here -->
-      </div>
+        <router-link
+          to="/about"
+          class="w-full text-shadow-3d bg-orange-custom text-white px-8 py-3 rounded-full text-xl font-bold shadow-[0_3px_0_0_#da9346] transition-transform hover:scale-105"
+        >
+          校園探索
+        </router-link>
+        <router-link
+          to="/actions"
+          class="w-full text-shadow-3d bg-blue-custom text-white px-8 py-3 rounded-full text-xl font-bold shadow-[0_3px_0_0_#78b6cb] transition-transform hover:scale-105"
+        >
+          SDGs行動
+        </router-link>
+        <router-link
+          to="/sdgs"
+          class="w-full text-shadow-3d bg-green-custom text-white px-8 py-3 rounded-full text-xl font-bold shadow-[0_3px_0_0_#82b989] transition-transform hover:scale-105"
+        >
+          SDGs成果
+        </router-link>
+      </section>
     </div>
   </main>
 </template>
