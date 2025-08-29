@@ -8,7 +8,7 @@
         'transition-all duration-1000 ease-out',
         isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full',
       ]"
-      class="w-full mt-20 lg:mt-60"
+      class="w-full mt-30 lg:mt-60"
     >
       <h1 class="text-4xl lg:text-7xl font-bold text-brown-500 lg:me-80">
         一起跟領角鴞探索中山國小吧！
@@ -24,7 +24,7 @@
           'transition-all duration-1000 ease-out',
           isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full',
         ]"
-        class="relative w-48 h-48 lg:w-64 lg:h-64 scale-150 lg:order-2 mt-20 lg:scale-270 lg:me-55 lg:mt-35"
+        class="relative w-48 h-48 lg:w-64 lg:h-64 lg:order-2 mt-20 lg:scale-270 lg:me-55 lg:mt-35"
         @mousemove="handleMouseMove"
         @mouseleave="resetEyes"
       >

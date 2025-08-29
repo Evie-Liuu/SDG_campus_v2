@@ -8,10 +8,11 @@
         </router-link>
       </div>
       <div class="w-1/3 text-center">
-        <h1 class="text-3xl font-bold">行動追蹤</h1>
+        <h1 class="text-2xl md:text-3xl font-bold">行動追蹤</h1>
       </div>
       <div class="w-1/3"></div>
     </div>
+    
   </header>
   <main
     class="p-10 flex flex-col justify-center items-center gap-8 max-w-7xl md:mx-auto"

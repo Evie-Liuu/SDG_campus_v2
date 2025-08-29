@@ -8,7 +8,7 @@
         </router-link>
       </div>
       <div class="w-1/3 text-center">
-        <h1 class="text-3xl font-bold">故事牆</h1>
+        <h1 class="text-2xl md:text-3xl font-bold">故事牆</h1>
       </div>
       <div class="w-1/3"></div>
     </div>
