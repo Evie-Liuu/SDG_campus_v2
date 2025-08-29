@@ -12,7 +12,7 @@
       $route.path !== '/' && $route.path !== '/about' ? 'bg-header' : '',
     ]"
   >
-    <router-link to="/">
+    <router-link to="/" @click="isMenuOpen = false">
       <!-- <img
         src="../assets/images/Landing/School_Logo.png"
         alt=""
