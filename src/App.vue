@@ -41,6 +41,7 @@
           ? 'bg-[url(@/assets/images/CS_school.png)] bg-cover bg-center overflow-hidden'
           : '',
       ]"
+      class="text-white text-shadow-3d md:text-black md:text-shadow-none"
     >
       <div class="absolute z-[-10] inset-0 bg-black/40 md:hidden"></div>
       <router-link
